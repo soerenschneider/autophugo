@@ -9,7 +9,7 @@
 
     {{- /* Build the list of sections and thumbnails */}}
     {{- $.Scratch.Set "sections" (slice) }}
-    {{- range (where .Site.Pages "Kind" "section").ByDate }}
+    {{- range (where .Site.Pages "Kind" "section").ByDate.Reverse }}
         {{- $title := .Title }}
         {{- $link := .Permalink }}
 
